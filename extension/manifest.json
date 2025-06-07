@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Vibeo - Gemini Video Summarizer",
+    "version": "1.0",
+    "description": "Summarize YouTube videos using Gemini AI.",
+    "permissions": ["activeTab", "scripting", "storage"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "48": "icon.png"
+    }
+  }
+  
