@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube AI Summarizer</title>
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+  <div class="yt-ai-sidebar-gradient"></div>
+  <div class="yt-ai-sidebar-container">
+    <header>
+      <img src="../icons/icon48.png" alt="Gemini" class="yt-ai-logo">
+      <h2>YouTube AI Summarizer</h2>
+    </header>
+    <div id="yt-ai-loading" class="yt-ai-loading">
+      <div class="yt-ai-spinner"></div>
+      <span>Summarizing with Gemini...</span>
+    </div>
+    <div id="yt-ai-summary" style="display:none;"></div>
+    <div id="yt-ai-error" class="yt-ai-error" style="display:none;"></div>
+    <div id="yt-ai-settings-panel" class="settings-panel">
+      <h3>🤖 Gemini AI Settings</h3>
+      <input type="text" placeholder="Gemini API Key" id="gemini-key">
+      <select id="summary-style">
+        <option value="brief">Brief Summary</option>
+        <option value="detailed">Detailed Analysis</option>
+        <option value="academic">Academic Style</option>
+        <option value="casual">Casual Notes</option>
+      </select>
+      <label>
+        <input type="checkbox" id="include-quotes"> Include Key Quotes
+      </label>
+      <label>
+        <input type="checkbox" id="chapter-breakdown"> Chapter Breakdown
+      </label>
+      <button id="save-settings">Save</button>
+    </div>
+    <div class="yt-ai-actions">
+      <button id="yt-ai-export-pdf">Export PDF</button>
+      <button id="yt-ai-bookmark">Bookmark</button>
+    </div>
+  </div>
+  <script src="sidebar.js"></script>
+</body>
+</html> 

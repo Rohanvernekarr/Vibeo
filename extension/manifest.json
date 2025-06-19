@@ -1,23 +1,53 @@
 {
     "manifest_version": 3,
-    "name": "Vibeo - Gemini Video Summarizer",
-    "version": "1.0",
-    "description": "Summarize YouTube videos using Gemini AI.",
-    "permissions": ["activeTab", "scripting", "storage"],
+    "name": "YouTube AI Summarizer",
+    "description": "Summarize YouTube videos with Gemini AI. Timestamped key points, PDF export, multilingual support, and more.",
+    "version": "1.0.0",
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "permissions": [
+      "activeTab",
+      "storage",
+      "scripting",
+      "identity",
+      "tabs"
+    ],
+    "host_permissions": [
+      "https://www.youtube.com/*"
+    ],
     "action": {
-      "default_popup": "popup.html"
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
     },
     "background": {
       "service_worker": "background.js"
     },
     "content_scripts": [
       {
-        "matches": ["*://*.youtube.com/*"],
-        "js": ["content.js"]
+        "matches": ["https://www.youtube.com/watch*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
       }
     ],
-    "icons": {
-      "48": "icon.png"
-    }
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "sidebar.html",
+          "sidebar.js",
+          "sidebar.css",
+          "libs/jspdf.min.js",
+          "libs/marked.min.js",
+          "icons/*"
+        ],
+        "matches": ["https://www.youtube.com/*"]
+      }
+    ]
   }
   

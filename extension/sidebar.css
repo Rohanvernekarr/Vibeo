@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  background: transparent;
+}
+.yt-ai-sidebar-gradient {
+  position: fixed;
+  top: 0; right: 0;
+  width: 400px; height: 100vh;
+  z-index: -1;
+  background: linear-gradient(135deg, #1a73e8 0%, #4285f4 100%);
+  opacity: 0.95;
+}
+.yt-ai-sidebar-container {
+  width: 400px;
+  min-height: 100vh;
+  padding: 0 0 32px 0;
+  box-sizing: border-box;
+  color: #fff;
+  position: relative;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 24px 8px 24px;
+}
+.yt-ai-logo {
+  width: 40px; height: 40px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(26,115,232,0.15);
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+.yt-ai-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px 0;
+}
+.yt-ai-spinner {
+  width: 48px; height: 48px;
+  border: 6px solid #fff;
+  border-top: 6px solid #4285f4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 12px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.yt-ai-error {
+  color: #ff5252;
+  background: rgba(255,255,255,0.1);
+  padding: 12px;
+  border-radius: 8px;
+  margin: 16px;
+}
+.settings-panel {
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 16px 24px;
+  margin: 16px 24px;
+  color: #fff;
+}
+.settings-panel input, .settings-panel select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+.settings-panel label {
+  display: block;
+  margin-bottom: 8px;
+}
+.settings-panel button {
+  background: #fff;
+  color: #1a73e8;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.yt-ai-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 24px 0 0 0;
+}
+.yt-ai-actions button {
+  background: #fff;
+  color: #1a73e8;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(26,115,232,0.08);
+}
+.yt-ai-timestamp {
+  background: #fff;
+  color: #1a73e8;
+  border-radius: 16px;
+  padding: 2px 10px;
+  font-size: 0.95em;
+  font-weight: 600;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.yt-ai-timestamp:hover {
+  background: #e3f0fd;
+}
+.yt-ai-tag {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: 0.9em;
+  margin-right: 6px;
+} 
